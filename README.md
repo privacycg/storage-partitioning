@@ -16,7 +16,7 @@ User agent state that is keyed by a single [origin](https://html.spec.whatwg.org
 
 To solve a key aspect of this, any such user agent state needs to be keyed by more than a single origin or site.
 
-There are many standards that together make up a user agent and many of these standards define “problematic” state. This repository’s [issue tracker](https://github.com/privacycg/storage-partitioning/issues) is where we're coordinating the effort to address these issues in an ideally holistic manner. The actual changes will happen in each impacted standards and collated here for visibility.
+There are many standards that together make up a user agent and many of these standards define “problematic” state. This repository’s [issue tracker](https://github.com/privacycg/storage-partitioning/issues) is where we're coordinating the effort to address these issues in an ideally holistic manner. The actual changes will happen in each impacted standard and are collated here for visibility.
 
 ## Additional keying
 
