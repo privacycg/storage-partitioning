@@ -68,7 +68,8 @@ An enumeration of user agent state and ongoing standards activity.
 * Browsing context group's agent cluster map (only observable with popups)
 * Permissions ([Feature Policy](https://w3c.github.io/webappsec-feature-policy/) allows these to be disabled by default when the top-level site is not equal to the current site and require explicit delegation in such cases)
 * Credentials (username and password storage; not a standardized feature)
+* Per-site user preferences
 
 ## Acknowledgments
 
-The author of this document was inspired by Chromium’s NIK, Firefox’s FPI/dFPI/StoragePrincipal, Safari’s ITP, XS-Leaks, and the many people wanting to improve these aspects of the web.
+The author of this document was inspired by Chromium’s Network Isolation Key, Firefox’s (dynamic) First-Party Isolation & `StoragePrincipal`, Safari’s Intelligent Tracking Prevention, XS-Leaks, and the many people wanting to improve these aspects of the web.
