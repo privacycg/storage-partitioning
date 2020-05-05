@@ -64,6 +64,7 @@ An enumeration of user agent state and ongoing standards activity.
    * Web Locks
 * Web Authentication
 * WebRTC’s `deviceId` ([w3c/mediacapture-main #675](https://github.com/w3c/mediacapture-main/issues/675))
+* Blob URL store ([w3c/FileAPI #153](https://github.com/w3c/FileAPI/issues/153))
 * `window.name`
 * Browsing context group's agent cluster map (only observable with popups)
 * Permissions ([Feature Policy](https://w3c.github.io/webappsec-feature-policy/) allows these to be disabled by default when the top-level site is not equal to the current site and require explicit delegation in such cases)
