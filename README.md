@@ -34,12 +34,13 @@ Aside from using additional keying, outright blocking of the user agent state is
 
 ## User agent state
 
-An enumeration of user agent state and ongoing standards activity.
+A likely inexhaustive enumeration of user agent state and ongoing standards activity:
 
 * Cookies
 * Network state:
-   * HTTP cache ([whatwg/fetch #943](https://github.com/whatwg/fetch/pull/943))
-   * Connection pooling
+   * HTTP cache ([whatwg/fetch #904](https://github.com/whatwg/fetch/issues/904), [whatwg/fetch #943](https://github.com/whatwg/fetch/pull/943))
+   * Connections ([whatwg/fetch #917](https://github.com/whatwg/fetch/issues/917))
+      * Also consider speculative connections
    * DNS
    * HTTP authentication
    * Alt-Svc
@@ -47,6 +48,9 @@ An enumeration of user agent state and ongoing standards activity.
    * HSTS
    * TLS client certificates
    * TLS session identifiers
+   * HPKP
+   * OCSP
+   * Intermediate CA cache
    * Prefetch
    * Preconnect
 * Storage ([whatwg/storage #18](https://github.com/whatwg/storage/issues/18)):
@@ -65,12 +69,21 @@ An enumeration of user agent state and ongoing standards activity.
 * Web Authentication
 * WebRTC’s `deviceId` ([w3c/mediacapture-main #675](https://github.com/w3c/mediacapture-main/issues/675))
 * Blob URL store ([w3c/FileAPI #153](https://github.com/w3c/FileAPI/issues/153))
+* HTML Standard’s list of available images
 * `window.name`
 * Browsing context group's agent cluster map (only observable with popups)
 * Permissions ([Feature Policy](https://w3c.github.io/webappsec-feature-policy/) allows these to be disabled by default when the top-level site is not equal to the current site and require explicit delegation in such cases)
-* Credentials (username and password storage; not a standardized feature)
-* Per-site user preferences
+   * Persistent storage ([whatwg/storage #87](https://github.com/whatwg/storage/issues/87))
+* Non-standardized features:
+   * Credentials (username and password storage)
+   * Form autofill data storage
+   * Per-site user preferences
+   * Favicon cache
+   * Page info media previews
+   * Save Page As
+
+If there is state or standards activity missing please [file an issue](https://github.com/privacycg/storage-partitioning/issues/new) or provide a pull request.
 
 ## Acknowledgments
 
-The author of this document was inspired by Chromium’s Network Isolation Key, Firefox’s (dynamic) First-Party Isolation & `StoragePrincipal`, Safari’s Intelligent Tracking Prevention, XS-Leaks, and the many people wanting to improve these aspects of the web.
+The author of this document was inspired by Chromium’s Network Isolation Key, Firefox’s (dynamic) First-Party Isolation, Safari’s Intelligent Tracking Prevention, XS-Leaks, and the many people wanting to improve these aspects of the web.
