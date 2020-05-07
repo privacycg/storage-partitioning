@@ -86,4 +86,4 @@ If there is state or standards activity missing please [file an issue](https://g
 
 ## Acknowledgments
 
-The author of this document was inspired by Chromium’s Network Isolation Key, Firefox’s (dynamic) First-Party Isolation, Safari’s Intelligent Tracking Prevention, XS-Leaks, and the many people wanting to improve these aspects of the web.
+The author of this document was inspired by Chromium’s Network Isolation Key, Firefox and Tor Browser’s First-Party Isolation, Safari’s Intelligent Tracking Prevention, XS-Leaks, and the many people wanting to improve these aspects of the web.
