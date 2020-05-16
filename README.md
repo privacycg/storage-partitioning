@@ -53,7 +53,7 @@ A likely inexhaustive enumeration of user agent state and ongoing standards acti
    * Intermediate CA cache
    * Prefetch
    * Preconnect
-* Storage ([whatwg/storage #18](https://github.com/whatwg/storage/issues/18)):
+* Storage ([whatwg/storage #88](https://github.com/whatwg/storage/issues/88), [whatwg/storage #90](https://github.com/whatwg/storage/issues/90)):
    * Indexed DB
    * Cache API
    * `localStorage`
