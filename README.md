@@ -58,7 +58,6 @@ A likely inexhaustive enumeration of user agent state and ongoing standards acti
    * Cache API
    * `localStorage`
    * `sessionStorage`
-   * `history.pushState()`
    * `new Notification()`
    * AppCache (actively being removed, probably not relevant)
 * Storage (communication channels):
