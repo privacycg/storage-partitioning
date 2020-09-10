@@ -20,7 +20,7 @@ There are many standards that together make up a user agent and many of these st
 
 ## Additional keying
 
-[whatwg/html #4966](https://github.com/whatwg/html/pull/4966) defined the [top-level origin](https://html.spec.whatwg.org/multipage/webappapis.html#top-level-origin) concept for an environment and HTML also defines site and [obtain a site](https://html.spec.whatwg.org/multipage/origin.html#obtain-a-site). Together these allow for a definition of top-level site, which most user agents are targeting as additional key.
+[whatwg/html #4966](https://github.com/whatwg/html/pull/4966) defined the [top-level origin](https://html.spec.whatwg.org/multipage/webappapis.html#concept-environment-top-level-origin) concept for an environment and HTML also defines site and [obtain a site](https://html.spec.whatwg.org/multipage/origin.html#obtain-a-site). Together these allow for a definition of top-level site, which most user agents are targeting as additional key.
 
 For some user agent state it might be beneficial to add even more keys, e.g., to prevent attacks between framed documents. [shivanigithub/http-cache-partitioning #2](https://github.com/shivanigithub/http-cache-partitioning/issues/2) has some relevant discussion.
 
