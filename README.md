@@ -38,9 +38,10 @@ A likely inexhaustive enumeration of user agent state and ongoing standards acti
 
 * Cookies
 * Network state:
-   * HTTP cache ([whatwg/fetch #904](https://github.com/whatwg/fetch/issues/904), [whatwg/fetch #943](https://github.com/whatwg/fetch/pull/943))
-   * Connections ([whatwg/fetch #917](https://github.com/whatwg/fetch/issues/917))
-      * Also consider speculative connections
+   * HTTP cache (standardized in Fetch)
+   * Connections (standardized in Fetch)
+      * Also consider speculative connections (unclear where these are created in standards, but if done through Fetch it would be correct)
+   * CORS-preflight cache ([whatwg/fetch #1101](https://github.com/whatwg/fetch/pull/1101))
    * DNS
    * HTTP authentication
    * Alt-Svc
