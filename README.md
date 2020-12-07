@@ -39,9 +39,11 @@ A likely inexhaustive enumeration of user agent state and ongoing standards acti
 * Cookies
 * Network state:
    * HTTP cache (standardized in Fetch)
-   * Connections (standardized in Fetch)
+   * HTTP connections (standardized in Fetch)
       * Also consider speculative connections (unclear where these are created in standards, but if done through Fetch it would be correct)
-   * CORS-preflight cache ([whatwg/fetch #1101](https://github.com/whatwg/fetch/pull/1101))
+   * WebSocket connections ([whatwg/fetch #1122](https://github.com/whatwg/fetch/issues/1122))
+   * WebRTC connections ([w3c/webrtc-pc #2613](https://github.com/w3c/webrtc-pc/issues/2613))
+   * WebTransport connections ([w3c/webtransport #128](https://github.com/w3c/webtransport/issues/128))
    * DNS
    * HTTP authentication
    * Alt-Svc
@@ -54,6 +56,7 @@ A likely inexhaustive enumeration of user agent state and ongoing standards acti
    * Intermediate CA cache
    * Prefetch
    * Preconnect
+   * CORS-preflight cache (standardized in Fetch)
 * Storage ([whatwg/storage #88](https://github.com/whatwg/storage/issues/88), [whatwg/storage #90](https://github.com/whatwg/storage/issues/90)):
    * Indexed DB
    * Cache API
