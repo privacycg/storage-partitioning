@@ -77,6 +77,7 @@ A likely inexhaustive enumeration of user agent state and ongoing standards acti
 * Browsing context group's agent cluster map (only observable with popups)
 * Permissions ([Feature Policy](https://w3c.github.io/webappsec-feature-policy/) allows these to be disabled by default when the top-level site is not equal to the current site and require explicit delegation in such cases)
    * Persistent storage ([whatwg/storage #87](https://github.com/whatwg/storage/issues/87))
+* WebGL and WebGPU's cache of compiled shaders and pipelines (standardized by highlighting the risk in the security/privacy consideration section as the caches are only observable through timing)
 * Non-standardized features:
    * Credentials (username and password storage)
    * Form autofill data storage
