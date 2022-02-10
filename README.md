@@ -30,7 +30,7 @@ For some user agent state (Cookies and Storage below in particular are under dis
 
 ## Blocking
 
-Aside from using additional keying, outright blocking of the user agent state is also considered at times, e.g., for Cookies or as happens today for Storage in opaque origins. This is not likely to be web compatible nor even desirable for all user agent state, but could well be a valid solution for some.
+Aside from using additional keying, outright blocking of the user agent state is also considered at times, e.g., for cross-site Cookies or as happens today for Storage in opaque origins. This is not likely to be web compatible nor even desirable for all user agent state, but could well be a valid solution for some.
 
 ## User agent state
 
@@ -41,7 +41,7 @@ A likely inexhaustive enumeration of user agent state and ongoing standards acti
    * HTTP cache (standardized in Fetch)
    * HTTP connections (standardized in Fetch)
       * Also consider speculative connections (unclear where these are created in standards, but if done through Fetch it would be correct)
-   * WebSocket connections ([whatwg/fetch #1122](https://github.com/whatwg/fetch/issues/1122))
+   * WebSocket connections ([whatwg/fetch #1243](https://github.com/whatwg/fetch/issues/1243))
    * WebRTC connections ([w3c/webrtc-pc #2613](https://github.com/w3c/webrtc-pc/issues/2613))
    * WebTransport connections ([w3c/webtransport #128](https://github.com/w3c/webtransport/issues/128))
    * DNS
@@ -62,10 +62,7 @@ A likely inexhaustive enumeration of user agent state and ongoing standards acti
    * Cache API
    * `localStorage`
    * `sessionStorage`
-   * `new Notification()`
-   * AppCache (actively being removed, probably not relevant)
-* Storage (communication channels):
-   * `BroadcastChannel`
+   * `BroadcastChannel` ([whatwg/html #5803](https://github.com/whatwg/html/issues/5803))
    * Shared workers
    * Service workers
    * Web Locks
@@ -73,10 +70,11 @@ A likely inexhaustive enumeration of user agent state and ongoing standards acti
 * WebRTC’s `deviceId` ([w3c/mediacapture-main #675](https://github.com/w3c/mediacapture-main/issues/675))
 * Blob URL store ([w3c/FileAPI #153](https://github.com/w3c/FileAPI/issues/153))
 * HTML Standard’s list of available images
-* `window.name`
+* `window.name` (standardized in HTML)
 * Browsing context group's agent cluster map (only observable with popups)
-* Permissions ([Feature Policy](https://w3c.github.io/webappsec-feature-policy/) allows these to be disabled by default when the top-level site is not equal to the current site and require explicit delegation in such cases)
+* Permissions ([Permissions Policy](https://w3c.github.io/webappsec-permissions-policy/) largely allows these to be disabled by default when the top-level site is not equal to the current site and require explicit delegation in such cases)
    * Persistent storage ([whatwg/storage #87](https://github.com/whatwg/storage/issues/87))
+   * Notifications ([whatwg/notifications #177](https://github.com/whatwg/notifications/issues/177))
 * WebGL and WebGPU's cache of compiled shaders and pipelines (standardized by highlighting the risk in the security/privacy consideration section as the caches are only observable through timing)
 * Non-standardized features:
    * Credentials (username and password storage)
@@ -87,6 +85,10 @@ A likely inexhaustive enumeration of user agent state and ongoing standards acti
    * Save Page As
 
 If there is state or standards activity missing please [file an issue](https://github.com/privacycg/storage-partitioning/issues/new) or provide a pull request.
+
+## Presentation
+
+The author of this document gave a short presentation in early 2022 about the state of this effort: [State of state partitioning](https://docs.google.com/presentation/d/1i7KvTtIS2JhAadQsdWLFpMzNmgXmUbXSfPuO_wYX6d8/edit).
 
 ## Acknowledgments
 
