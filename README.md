@@ -16,11 +16,11 @@ User agent state that is keyed by a single [origin](https://html.spec.whatwg.org
 
 To solve a key aspect of this, any such user agent state needs to be keyed by more than a single origin or site.
 
-There are many standards that together make up a user agent and many of these standards define “problematic” state. This repository’s [issue tracker](https://github.com/privacycg/storage-partitioning/issues) is where we're coordinating the effort to address these issues in an ideally holistic manner. The actual changes will happen in each impacted standard and are collated here for visibility.
+There are many standards that together make up a user agent and many of these standards define “problematic” state. This repository’s [issue tracker](https://github.com/privacycg/storage-partitioning/issues) is where we're coordinating the effort to address these issues in a holistic manner. The actual changes will happen in each impacted standard and are collated here for visibility.
 
 ## Additional keying
 
-[whatwg/html #4966](https://github.com/whatwg/html/pull/4966) defined the [top-level origin](https://html.spec.whatwg.org/multipage/webappapis.html#concept-environment-top-level-origin) concept for an environment and HTML also defines site and [obtain a site](https://html.spec.whatwg.org/multipage/origin.html#obtain-a-site). Together these allow for a definition of top-level site, which most user agents are targeting as additional key.
+[whatwg/html #4966](https://github.com/whatwg/html/pull/4966) defined the [top-level origin](https://html.spec.whatwg.org/multipage/webappapis.html#concept-environment-top-level-origin) concept for an environment and HTML also defines site and [obtain a site](https://html.spec.whatwg.org/multipage/origin.html#obtain-a-site). Together these allow for a definition of top-level site, which most user agents are targeting as additional key. When this additional key is cross-site from the “normal” key, the relevant state can be considered to be partitioned.
 
 For some user agent state it might be beneficial to add even more keys, e.g., to prevent attacks between framed documents. [shivanigithub/http-cache-partitioning #2](https://github.com/shivanigithub/http-cache-partitioning/issues/2) has some relevant discussion.
 
@@ -30,13 +30,22 @@ For some user agent state (Cookies and Storage below in particular are under dis
 
 ## Blocking
 
-Aside from using additional keying, outright blocking of the user agent state is also considered at times, e.g., for cross-site Cookies or as happens today for Storage in opaque origins. This is not likely to be web compatible nor even desirable for all user agent state, but could well be a valid solution for some.
+Aside from using additional keying, outright blocking of the user agent state is also considered at times, e.g., for cross-site cookies or as happens today for storage in opaque origins. This is not likely to be web compatible nor even desirable for all user agent state, but could well be a valid solution for some.
 
 ## User agent state
 
-A likely inexhaustive enumeration of user agent state and ongoing standards activity:
+This section contains a likely inexhaustive enumeration of user agent state and ongoing standards activity. If there is state or standards activity missing please [file an issue](https://github.com/privacycg/storage-partitioning/issues/new) or provide a pull request.
 
-* Cookies
+### Cookies
+
+The tentative overall plan is to block cross-site cookies and add support for partitioned cookies via opt-in. The details are still under discussion though it seems likely to be eventually standardized across the IETF and WHATWG. Relevant discussions:
+
+* [Cookie layering](https://github.com/httpwg/http-extensions/issues/2084) (a start of a discussion with the IETF how to best structure the HTTP State Management Mechanism specification to account for these changes to cookies)
+* For opt-in partitioned cookies [CHIPS](https://github.com/WICG/CHIPS) is the most likely candidate, though a few favor [an approach using `requestStorageAccess()`](https://github.com/privacycg/storage-access/issues/75).
+* Meeting proposal: [cross-site cookies standardization, part 2](https://github.com/privacycg/meetings/issues/19).
+
+### Remaining user agent state
+
 * Network state:
    * HTTP cache (standardized in Fetch)
    * HTTP connections (standardized in Fetch)
@@ -83,8 +92,6 @@ A likely inexhaustive enumeration of user agent state and ongoing standards acti
    * Favicon cache
    * Page info media previews
    * Save Page As
-
-If there is state or standards activity missing please [file an issue](https://github.com/privacycg/storage-partitioning/issues/new) or provide a pull request.
 
 ## Presentation
 
