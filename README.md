@@ -42,7 +42,9 @@ The tentative overall plan is to block cross-site cookies and add support for pa
 
 * [Cookie layering](https://github.com/httpwg/http-extensions/issues/2084) (a start of a discussion with the IETF how to best structure the HTTP State Management Mechanism specification to account for these changes to cookies)
 * For opt-in partitioned cookies [CHIPS](https://github.com/WICG/CHIPS) is the most likely candidate, though a few favor [an approach using `requestStorageAccess()`](https://github.com/privacycg/storage-access/issues/75). These two approaches are not necessarily conflicting and some browsers have expressed interest in supporting both.
-* Meeting proposal: [cross-site cookies standardization, part 2](https://github.com/privacycg/meetings/issues/19).
+* Meetings: 
+  * [Cross-site cookies standardization](https://github.com/privacycg/meetings/issues/16) ([minutes](https://github.com/privacycg/meetings/blob/main/2022/telcons/04-28-minutes.md)).
+  * [cross-site cookies standardization, part 2](https://github.com/privacycg/meetings/issues/19) ([minutes](https://github.com/privacycg/meetings/blob/main/2022/telcons/05-12-minutes.md)).
 
 ### Remaining user agent state
 
