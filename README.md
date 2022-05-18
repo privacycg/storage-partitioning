@@ -41,7 +41,7 @@ This section contains a likely inexhaustive enumeration of user agent state and 
 The tentative overall plan is to block cross-site cookies and add support for partitioned cookies via opt-in. The details are still under discussion though it seems likely to be eventually standardized across the IETF and WHATWG. Relevant discussions:
 
 * [Cookie layering](https://github.com/httpwg/http-extensions/issues/2084) (a start of a discussion with the IETF how to best structure the HTTP State Management Mechanism specification to account for these changes to cookies)
-* For opt-in partitioned cookies [CHIPS](https://github.com/WICG/CHIPS) is the most likely candidate, though a few favor [an approach using `requestStorageAccess()`](https://github.com/privacycg/storage-access/issues/75).
+* For opt-in partitioned cookies [CHIPS](https://github.com/WICG/CHIPS) is the most likely candidate, though a few favor [an approach using `requestStorageAccess()`](https://github.com/privacycg/storage-access/issues/75). These two approaches are not necessarily conflicting and some browsers have expressed interest in supporting both.
 * Meeting proposal: [cross-site cookies standardization, part 2](https://github.com/privacycg/meetings/issues/19).
 
 ### Remaining user agent state
