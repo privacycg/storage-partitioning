@@ -68,6 +68,7 @@ The tentative overall plan is to block cross-site cookies and add support for pa
    * Prefetch
    * Preconnect
    * CORS-preflight cache (standardized in Fetch)
+   * Network Error Logging policy cache ([w3c/network-error-logging #138](https://github.com/w3c/network-error-logging/issues/138))
 * Storage ([whatwg/storage #88](https://github.com/whatwg/storage/issues/88), [whatwg/storage #90](https://github.com/whatwg/storage/issues/90)):
    * Indexed DB
    * Cache API
